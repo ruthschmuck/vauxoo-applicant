@@ -1,16 +1,19 @@
 """
-Your module documentation here
+This module adds the elements within a list
 """
 
 
 class CalculatorClass(object):
     """
-    Your class documentation here
+    There is a sum function inside of the class.
+    It is in charge of returning the sum
     """
 
     def sum(self, num_list):
         """
-        Your method documentation here
+        The sum function receives num_list as list.
+        The reduce() function calculates the sum of
+        the elements within the list
         """
         # your sum code here
-        return "not implement yet"  # Remove this dummy line
+        return reduce(lambda x, y: x + y, num_list)
