@@ -16,7 +16,9 @@ CREATE TABLE employee (
     first_name varchar(10) NOT NULL,
     last_name varchar(10) NOT NULL,
     departament_id integer NOT NULL, 
+    boss_id integer, -- sql3
     PRIMARY KEY (id),
+    FOREIGN KEY (boss_id) REFERENCES employee (id),
     FOREIGN KEY (departament_id) REFERENCES employee_department (id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
@@ -65,3 +67,9 @@ INSERT INTO employee_hobby_relation VALUES (3, 3);
 -- Juan Garcia's hobby is play tennis and football
 INSERT INTO employee_hobby_relation VALUES (4, 3);
 INSERT INTO employee_hobby_relation VALUES (4, 1);
+
+--insert bosses
+UPDATE employee SET boss_id = 1 WHERE id = 2;
+UPDATE employee SET boss_id = 3 WHERE id = 4;
+UPDATE employee SET boss_id = 1 WHERE id = 3;
+UPDATE employee SET boss_id = 3 WHERE id = 1;
