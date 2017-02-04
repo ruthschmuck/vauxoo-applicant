@@ -13,8 +13,8 @@ class PrimeClass(object):
         """
         1.- It verifies that the numbers are positive and
         not the number 1 since they do not belong to the prime numbers
-        2.- El ciclo empieza en 2 hasta num_int -1 verificando
-        que se cumpla la condición de numero primo
+        2.- The cycle starts from 2 to num_int -1 verifying that
+        the prime number condition is satisfied
         3.- If the number is prime, it will return true,
         otherwise it will return false
         """
